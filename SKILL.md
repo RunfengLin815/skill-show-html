@@ -18,9 +18,10 @@ level: 2
 ## 输出规范
 
 ### 文件命名与存放
-1. 存放目录：当前工作目录下的 `.cc-reviews/`（不存在时自动创建）
+1. 存放目录：当前工作目录下的 `cc-reviews/`（不存在时自动创建）
 2. 文件名格式：`{YYYY-MM-DD-HHmmss}-{topic-slug}.html`，topic-slug 为 2-4 个英文单词的 kebab-case 摘要
-3. 示例：`.cc-reviews/2026-05-13-143022-arch-decision.html`
+3. 如果目标文件已存在，在文件名末尾追加 `-{n}`（n 从 2 开始递增）以避免覆盖，例如 `cc-reviews/2026-05-13-143022-arch-decision-2.html`
+4. 示例：`cc-reviews/2026-05-13-143022-arch-decision.html`
 
 写入后执行 `open <文件路径>` 在浏览器中打开。
 
